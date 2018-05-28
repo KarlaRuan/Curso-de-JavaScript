@@ -37,7 +37,7 @@ cursoJS.inscribir("Uriel");*/
 //CLASES
 
 //Class declaration (es la declaración más común)
-class Curso{
+/*class Curso{
 	constructor(titulo){
 		this.titulo=titulo;
 	}
@@ -49,7 +49,18 @@ class Curso{
 
 let javaScriptCurso=new Curso("Curso Profesional de javaScript");
 console.log(javaScriptCurso.titulo);
-javaScriptCurso.inscribir("Karla");
+javaScriptCurso.inscribir("Karla");*/	
 //Class expression
 /*let Curso=class{}
 let Usuario=class Usuario{}*/
+
+//CONSTRUCTORES
+//Cuando se manda llamar la clase se ejecuta esta función de manera inmediata
+class Curso{
+	constructor(titulo,duracio,color='blue'){
+		this.titulo=titulo;
+		this.duracion=duracion;
+		this.color=color;
+	}
+}
+new Curso("Nombre del curso");
