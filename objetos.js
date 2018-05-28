@@ -56,11 +56,49 @@ let Usuario=class Usuario{}*/
 
 //CONSTRUCTORES
 //Cuando se manda llamar la clase se ejecuta esta función de manera inmediata
-class Curso{
+/*class Curso{
 	constructor(titulo,duracio,color='blue'){
 		this.titulo=titulo;
 		this.duracion=duracion;
 		this.color=color;
 	}
 }
-new Curso("Nombre del curso");
+new Curso("Nombre del curso");*/
+
+//HERENCIA
+//Sirve para reutilizar codigo y no sea repetitivo
+/*class Player{
+	play(){this.video.play();}
+	duration(){return this.video.duration/100;}
+}
+class Vimeo extends Player{
+	open(){this.redirectToVimeo(this.video);}
+}
+class YouTube extends Player{
+	open(){this.redirectToYouTube(this.video);}
+}
+let video =new YouTube();
+video.play();
+
+class CustomeDate extends Date{}
+class Coleccion extends Array{}*/
+
+class User{
+	constructor(nombre){
+		this.nombre=nombre;
+	}
+	saludar(){
+		console.log("Hola " +this.nombre);
+	}
+}
+class Admin extends User{
+	constructor(nombre){
+		super(nombre);
+	}
+	saludar(){
+		super.saludar(); //Toma lo que tenga la función saludar
+		console.log("Administrador");
+	}
+}
+let admin=new Admin("Karla");
+admin.saludar();
