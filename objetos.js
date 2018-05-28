@@ -1,6 +1,6 @@
 //JSON
 //Declaracion de propiedades y metodos
-let curso={
+/*let curso={
 	titulo: 'Curso Profesional de JavaScript',
 	duracion: 2.2,
 	formato: 'video',
@@ -31,4 +31,25 @@ let cursoRuby=new Curso("Curso de Ruby");
 
 console.log(cursoJS.titulo);
 console.log(cursoRuby.titulo);
-cursoJS.inscribir("Uriel");
+
+cursoJS.inscribir("Uriel");*/
+
+//CLASES
+
+//Class declaration (es la declaración más común)
+class Curso{
+	constructor(titulo){
+		this.titulo=titulo;
+	}
+
+	inscribir(usuario){
+		console.log(usuario+" se ha inscrito");
+	}
+}
+
+let javaScriptCurso=new Curso("Curso Profesional de javaScript");
+console.log(javaScriptCurso.titulo);
+javaScriptCurso.inscribir("Karla");
+//Class expression
+/*let Curso=class{}
+let Usuario=class Usuario{}*/
